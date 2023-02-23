@@ -5,6 +5,7 @@ class Solution:
     def f(self, k, w, profits, capital):
         n = len(profits)
         project = [(capital[i], profits[i]) for i in range(n)]
+        project.sort()
         i = 0
         heap = []
         while k > 0:
