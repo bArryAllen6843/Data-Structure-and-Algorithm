@@ -24,7 +24,8 @@ class Solution:
 
 
 if __name__ == '__main__':
-    nums = [1, 2, 3, 4]
+    # nums = [1, 2, 3, 4]
     # nums = [4, 1, 5, 20, 3]
+    nums=[10,4,3]
     a = Solution()
     print(a.minimumDeviation(nums))
