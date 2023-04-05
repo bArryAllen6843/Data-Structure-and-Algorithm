@@ -4,7 +4,7 @@ class Solution:
         res=0
         for i in range(len(nums)):
             sum+=nums[i]
-            res=max(res, (sum+1)//(i+1))
+            res=max(res, (sum+i)//(i+1))
         return res
 
 if __name__ == '__main__':
