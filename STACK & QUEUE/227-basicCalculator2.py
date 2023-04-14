@@ -12,8 +12,8 @@ class Solution:
                     st.append(-num)
                 elif sign == "*":
                     st.append(st.pop() * num)
-                elif sign == "/":
-                    st.append(int(st.pop() * num))
+                else:
+                    st.append(int(st.pop() / num))
                 num = 0
                 sign = s[i]
         return sum(st)
