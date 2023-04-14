@@ -38,11 +38,23 @@ class Solution:
 
         return total_sum & 1 == 0 and subsetSum(total_sum // 2)
 
+    # ANOTHER APPROACH
+    # Time Complexity : O(N*sum)
+    # Space Complexity : O(sum)
+    def canPartition3(self,nums):
+        total_sum = sum(nums)
+        if total_sum & 1: return False
+        half_sum, dp = total_sum // 2, 1
+        for num in nums:
+            dp |= dp << num
+        return dp & 1 << half_sum
+
 
 if __name__ == '__main__':
-    # nums = [2, 2, 1, 5]
-    nums = [1, 2, 3, 5]
+    nums = [2, 2, 1, 5]
+    # nums = [1, 2, 3, 5]
     a = Solution()
     print(a.canPartition(nums))
     print(a.canPartition1(nums))
     print(a.canPartition2(nums))
+    print(a.canPartition3(nums))
