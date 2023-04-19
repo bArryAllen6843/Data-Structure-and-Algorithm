@@ -1,4 +1,6 @@
 class Solution:
+    # TC: O(N)
+    # SC: O(N)
     def nextGreaterElements(self, nums):
         stack, res = [], [-1] * len(nums)
         # this loop will run in cyclic form
