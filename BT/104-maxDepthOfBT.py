@@ -12,12 +12,14 @@ class Solution:
         return 0
 
 
-root = TreeNode(1)
-root.left = TreeNode(1)
-root.right = TreeNode(1)
-root.left.left = TreeNode(1)
-root.left.left.left = TreeNode(1)
+if __name__ == '__main__':
 
-ls = Solution()
-ls.height(root)
-print(ls)
+    root = TreeNode(1)
+    root.left = TreeNode(1)
+    root.right = TreeNode(1)
+    root.left.left = TreeNode(1)
+    root.left.left.left = TreeNode(1)
+
+    ls = Solution()
+    ls.height(root)
+    print(ls)
